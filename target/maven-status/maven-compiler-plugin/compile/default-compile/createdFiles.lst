@@ -1,0 +1,11 @@
+com\student\test\StudentRestAPI\service\impl\CustomerServiceImpl.class
+com\student\test\StudentRestAPI\controller\StudentController.class
+com\student\test\StudentRestAPI\repository\CustomerRepositry.class
+com\student\test\StudentRestAPI\repository\StudentRepository.class
+com\student\test\StudentRestAPI\service\CustomerService.class
+com\student\test\StudentRestAPI\service\StudentService.class
+com\student\test\StudentRestAPI\entity\Student.class
+com\student\test\StudentRestAPI\StudentRestApiApplication.class
+com\student\test\StudentRestAPI\controller\CustomerController.class
+com\student\test\StudentRestAPI\entity\Customer.class
+com\student\test\StudentRestAPI\service\StudentServiceImpl.class
