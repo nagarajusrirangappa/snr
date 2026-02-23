@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 @Table(name = "customer_1")
 public class Customer {
 
-   // @Column(name = "customer_id")
+    // @Column(name = "customer_id")
     @Id //create in primary key oin the DB.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long customerId;
@@ -39,6 +39,19 @@ public class Customer {
 
     public String getCity() {
         return city;
+    }
+
+
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     @Override
