@@ -1,7 +1,10 @@
 package com.student.test.StudentRestAPI.controller;
 
 import com.student.test.StudentRestAPI.entity.Customer;
+import com.student.test.StudentRestAPI.exception.CustomerNotFoundException;
+import com.student.test.StudentRestAPI.exception.ExceptionResponse;
 import com.student.test.StudentRestAPI.service.CustomerService;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,10 +36,16 @@ public class CustomerController {
     public Customer getAllCustomerData(@PathVariable Long cid ){
         Optional<Customer> optionalCustomer=customerService.getByCustomerId(cid);
 
-        if(optionalCustomer.isPresent()){
-            return  optionalCustomer.get();
+        if(optionalCustomer.isEmpty()){
+            throw new CustomerNotFoundException("id::"+cid);
         }
-        return optionalCustomer.orElseThrow();
+       /* if(optionalCustomer.isPresent()){
+            return  optionalCustomer.get();
+        }*/
+        Customer customer=optionalCustomer.get();
+
+        return customer;
+
     }
 
 
